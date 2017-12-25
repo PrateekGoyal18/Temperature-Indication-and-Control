@@ -3,8 +3,8 @@ dht DHT;
 
 #define DHT11_PIN 9
 int buzz=10;
-int mlp=11;
-int mrp=12;
+int mlp=11;   // Motor left Pin
+int mrp=12;   // Motor right Pin
 
 
 void setup()

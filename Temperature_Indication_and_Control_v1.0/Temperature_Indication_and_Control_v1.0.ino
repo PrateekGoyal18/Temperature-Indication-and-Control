@@ -21,9 +21,9 @@ void setup()
   
   pinMode(motor,OUTPUT);
   pinMode(buzzer,OUTPUT);
-  
+
+  // LCD functions
   lcd.begin(16,2);
-  // Prints a message to the LCD
   lcd.setCursor(0,1);
   lcd.print("Hello User !!");
   delay(2000);
@@ -38,6 +38,7 @@ void loop()
 {
   lcd.setCursor(0,0);
   temp=analogRead(sensor);
+  
   tempc=(temp*5)/10;
   tempf=(temp*1.8)+32;
   
@@ -103,9 +104,9 @@ void loop()
     digitalWrite(13,HIGH);
  }
  
-  lcd.print("Temp.in C = "); // prints the temperature in degreeC
+  lcd.print("Temp. in C = "); // prints the temperature in degree C
   lcd.println(tempc);
   lcd.setCursor(0,1);
-  lcd.print("Temp.in F = "); // prints the temperature in degreeF
+  lcd.print("Temp. in F = "); // prints the temperature in degree F
   lcd.println(tempf);
 }
